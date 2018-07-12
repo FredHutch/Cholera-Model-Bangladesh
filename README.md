@@ -1,5 +1,5 @@
 # Cholera-Model-Bangladesh
-We developed an age-structured mathematical model of cholera transmission. Compartments in the model are unvaccinated susceptible (S), vaccinated susceptible (V), symptomatically infected (I), asymptomatically infected (A), or recovered and immune (R) from cholera (Figure 1). The concentration of V. cholerae in the environment (water) is tracked in an additional compartment (W). Susceptible individuals may become infected by direct contact with infected individuals (direct transmission) or by exposure to V. cholerae in the environment (indirect transmission).
+We developed an age-structured mathematical model of cholera transmission. Compartments in the model are unvaccinated susceptible (S), vaccinated susceptible (V), symptomatically infected (I), asymptomatically infected (A), or recovered and immune (R) from cholera. The concentration of V. cholerae in the environment (water) is tracked in an additional compartment (W). Susceptible individuals may become infected by direct contact with infected individuals (direct transmission) or by exposure to V. cholerae in the environment (indirect transmission).
 
 The model aggregates the population in compartments by disease status and age. Age cohorts represent children under 2 years old, pre-school aged children (2 to 4 years old), school aged children (5 to 14 years old), and adults (15 years old and older). Younger age groups are assumed to be more susceptible to infection. Births are modeled by adding unvaccinated susceptibles to the youngest age cohort each year, and deaths are modeled by removing individuals from all age cohorts. Birth and age-specific mortality rates were based on data from the Matlab Health and Demographic Surveillance System. Cohorts are aged by moving individuals into the next older age compartment at the appropriate rates.
 
@@ -8,3 +8,9 @@ Frequency-dependent transmission rates are assumed for infections acquired throu
 The model is calibrated to fit the dynamics of cholera cases recorded between 1997 and 2001 in Matlab. The proportion of recovered individuals at the beginning of 1997 is estimated based on time-series data of cholera incidence in Matlab, the assumed reporting rate, and the duration of natural immunity. Two periods of increased environmental transmission occur annually with the first peak occurring in spring (approximately April to May) followed by a larger peak in autumn (approximately September to November). 
 
 The model assumes the use of the bivalent whole-cell oral cholera vaccine to be produced locally. The five-year, age-specific vaccine efficacy rates used for two doses of the vaccine are from the Kolkata clinical trial of Shanchol™ (42% for 1-4 year olds, 68% for 5-14 year olds, and 74% for persons 15 years and older). It also assumes that vaccine efficacy is based on the age at vaccination (1-4, 5-14 and 15+ years old), using the age-specific vaccine efficacy estimates above.
+
+File description:
+1. vacM6_62_final.m - MATLAB code used to run vaccination campaigns with calibrated parameter sets
+2. M57f.m - function desctibing model structure and rates of transitions
+3. bestM66_97.mat - calibrated parameter set fitting data from Matlab, Bangladesh
+4. vacM66a_100camp.mat - stored randomly selected parameters of seasonal forcing 
